@@ -12,7 +12,13 @@
 <body>
     <div ng-controller="myCtr">
         <table>
-            <tr ng-repeat="friend in news">
+            <tr ng-repeat="friend in news"
+                ng-if="friend.source.name !=='Hitb.org' &&
+                friend.source.name !=='Inside.com.tw' &&
+                friend.source.name !=='Dailyfx.com' &&
+                friend.source.name !=='Sys-con.com'
+                "
+                >
                 <td>
                     <img ng-src="{{friend.urlToImage}}" width="100" height="100" alt="">
                 </td>
