@@ -14,10 +14,10 @@
         <table>
             <!-- || is or, && is and, !== not equal, == equals -->
             <tr ng-repeat="friend in news"
-                ng-if="friend.source.name == 'Hitb.org' ||
-                friend.source.name == 'Inside.com.tw' ||
-                friend.source.name == 'Dailyfx.com' ||
-                friend.source.name == 'Sys-con.com'
+                ng-if="friend.source.name !== 'Hitb.org' &&
+                friend.source.name !== 'Inside.com.tw' &&
+                friend.source.name !== 'Dailyfx.com' &&
+                friend.source.name !== 'Sys-con.com'
                 "
                 >
                 <td>
